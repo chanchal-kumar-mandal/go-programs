@@ -44,11 +44,9 @@ func main() {
 	fmt.Println(employee5)
 
 	// for range loop to iterate over a Map
-	var employee6 = map[string]int{"Mark":10,"Sandy":20}
-    fmt.Println(employee6)   // Initial Map
-    
-    employee6["Rocky"] = 30  // Add element
-    employee6["Josef"] = 40  
-    employee6["Mark"] = 50   // Edit element
-    fmt.Println(employee6)
+	var employee6 = map[string]int{"Mark": 10, "Sandy": 20,
+        "Rocky": 30, "Rajiv": 40, "Kate": 50}
+    for key, element := range employee6 {
+        fmt.Println("Key:", key, "=>", "Element:", element)
+    }
 }
