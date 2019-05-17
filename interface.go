@@ -1,35 +1,44 @@
 package main
 
-import "fmt"
+import (
+    "fmt" 
+    "math"
+)
 
-type Rock struct {
-  Mass   int
-  Volume int
+/* define an interface */
+type Shape interface {
+    area() float64
 }
 
-func (r Rock) Density() int {
-  return r.Mass / r.Volume
+/* define a circle */
+type Circle struct {
+    x,y,radius float64
 }
 
-func IsItDenser(a, b Dense) bool {
-  return a.Density() > b.Density()
+/* define a rectangle */
+type Rectangle struct {
+    width, height float64
 }
 
-type Geode struct {
+/* define a method for circle (implementation of Shape.area())*/
+func(circle Circle) area() float64 {
+    return math.Pi * circle.radius * circle.radius
 }
 
-func (g Geode) Density() int {
-  return 100
+/* define a method for rectangle (implementation of Shape.area())*/
+func(rect Rectangle) area() float64 {
+    return rect.width * rect.height
 }
 
-type Dense interface {
-  Density() int
+/* define a method for shape */
+func getArea(shape Shape) float64 {
+    return shape.area()
 }
 
 func main() {
-  r := Rock{10, 1}
-  g := Geode{}
-  // Returns true because Geode's Density method always
-  // returns 100
-  fmt.Println(IsItDenser(g, r))
+    circle := Circle{x:0,y:0,radius:5}
+    rectangle := Rectangle {width:10, height:5}
+
+    fmt.Printf("Circle area: %f\n",getArea(circle))
+    fmt.Printf("Rectangle area: %f\n",getArea(rectangle))
 }
