@@ -1,4 +1,54 @@
 /**
+ * pointer
+ */
+
+package main
+
+import(
+	"fmt"
+)
+
+func main(){
+	var a int = 20
+	var p *int
+
+	p = &a
+
+	fmt.Printf("Address of a variable = %x", &a)
+
+	fmt.Printf("Address stored in p variable = %x", p)
+
+	fmt.Printf("Value of *p variable = %d", *p)
+}
+
+
+
+/**
+ * Array and For Loop
+ */
+
+// package main
+
+// import(
+// 	"fmt"
+// )
+
+// func main(){
+// 	var arr [10] int
+// 	var i, j int
+
+// 	for i = 0; i < 10; i++ {
+// 		arr[i] = i + 100
+// 	}
+
+// 	for j = 0; j < 10; j++ {
+// 		fmt.Printf("Element[%d] = %d ", j, arr[j])
+// 	}
+// }
+
+
+
+/**
  * functins
  */
 
