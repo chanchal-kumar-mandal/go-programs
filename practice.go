@@ -1,5 +1,5 @@
 /**
- * pointer
+ * Structure
  */
 
 package main
@@ -8,18 +8,61 @@ import(
 	"fmt"
 )
 
-func main(){
-	var a int = 20
-	var p *int
-
-	p = &a
-
-	fmt.Printf("Address of a variable = %x", &a)
-
-	fmt.Printf("Address stored in p variable = %x", p)
-
-	fmt.Printf("Value of *p variable = %d", *p)
+type Books struct {
+	title string
+	author string
+	subject string
+	bookId int
 }
+
+func main() {
+	var Book1 Books
+	var Book2 Books
+
+	Book1.title = "Go Programming"
+	Book1.author = "Mike"
+	Book1.subject = "GO Programming Tutorial"
+	Book1.bookId = 100
+
+	Book2.title = "PHP Programming"
+	Book2.author = "Robert"
+	Book2.subject = "PHP Programmig Tutorial"
+	Book2.bookId = 200
+
+	fmt.Printf(" Book 1 title is = %s\n", Book1.title)
+	fmt.Printf(" Book 1 author is = %s\n", Book1.author)
+	fmt.Printf(" Book 1 subject is = %s\n", Book1.subject)
+	fmt.Printf(" Book 1 id is = %d\n", Book1.bookId)
+
+	fmt.Printf(" Book 2 title is = %s\n", Book2.title)
+	fmt.Printf(" Book 2 author is = %s\n", Book2.author)
+	fmt.Printf(" Book 2 subject is = %s\n", Book2.subject)
+	fmt.Printf(" Book 2 id is = %d\n", Book2.bookId)
+}
+
+
+/**
+ * pointer
+ */
+
+// package main
+
+// import(
+// 	"fmt"
+// )
+
+// func main(){
+// 	var a int = 20
+// 	var p *int
+
+// 	p = &a
+
+// 	fmt.Printf(" Address of a variable = %x\n", &a)
+
+// 	fmt.Printf(" Address stored in p variable = %x\n", p)
+
+// 	fmt.Printf(" Value of *p variable = %d\n", *p)
+// }
 
 
 
@@ -42,7 +85,7 @@ func main(){
 // 	}
 
 // 	for j = 0; j < 10; j++ {
-// 		fmt.Printf("Element[%d] = %d ", j, arr[j])
+// 		fmt.Printf(" Element[%d] = %d\n", j, arr[j])
 // 	}
 // }
 
@@ -65,7 +108,7 @@ func main(){
 
 // 	ret = max(a, b)
 
-// 	fmt.Printf("Max value is %d", ret)
+// 	fmt.Printf("Max value is %d\n", ret)
 
 // 	m, n := swap("Jim", "Umair")
 // 	fmt.Println(m, n)
