@@ -1,38 +1,80 @@
 /**
+ * Recursion
+ */
+
+// package main
+
+// import(
+// 	"fmt"
+// )
+
+// func factorial(i int) int{
+// 	if i <=1 {
+// 		return 1
+// 	}
+
+// 	return i * factorial(i - 1)
+// }
+
+// func fibonacci(j int) int {
+// 	if j == 0 {
+// 		return 0
+// 	}
+// 	if j == 1 {
+// 		return 1
+// 	}
+
+// 	return fibonacci(j - 1) + fibonacci(j - 2) 
+// }
+
+// func main() {
+// 	var i int = 10
+// 	fmt.Printf("Factorial of %d is %d", i, factorial(i))
+
+// 	fmt.Println("\nFibonacci series upto 10...\n")
+
+// 	var j int
+// 	for j = 0; j < 10; j++ {
+// 		fmt.Printf("%d", fibonacci(j))
+// 	}
+// }
+
+
+/**
  * map, range, delete()
  */
 
-package main
+// package main
 
-import(
-	"fmt"
-)
+// import(
+// 	"fmt"
+// )
 
-func main(){
-	var countryCapitalMap map[string]string
+// func main(){
+// 	var countryCapitalMap map[string]string
 
-	countryCapitalMap = make(map[string]string)
+// 	countryCapitalMap = make(map[string]string)
 
-	countryCapitalMap["France"] = "Paris"
-	countryCapitalMap["Italy"] = "Rome"
-	countryCapitalMap["Japan"] = "Tokyo"
-	countryCapitalMap["India"] = "New Delhi"
+// 	countryCapitalMap["France"] = "Paris"
+// 	countryCapitalMap["Italy"] = "Rome"
+// 	countryCapitalMap["Japan"] = "Tokyo"
+// 	countryCapitalMap["India"] = "New Delhi"
 
-	fmt.Println("Orginal map")
+// 	fmt.Println("Orginal map")
 
-	for country := range countryCapitalMap {
-		fmt.Println(" Capital of ", country, " is ", countryCapitalMap[country])
-	}
+// 	for country := range countryCapitalMap {
+// 		fmt.Println("\nCapital of ", country, " is ", countryCapitalMap[country])
+// 	}
 
-	delete(countryCapitalMap, "Italy")
-	fmt.Println("Entry of Italy is deleted.")
+// 	delete(countryCapitalMap, "Italy")
+// 	fmt.Println("\nEntry of Italy is deleted.")
 	
-	fmt.Println("Updated map")
+// 	fmt.Println("\Updated map")
 
-	for country := range countryCapitalMap {
-		fmt.Println(" Capital of ", country, " is ", countryCapitalMap[country])
-	}
-}
+// 	for country := range countryCapitalMap {
+// 		fmt.Println("\nCapital of ", country, " is ", countryCapitalMap[country])
+// 	}
+// }
 
 
 /**
