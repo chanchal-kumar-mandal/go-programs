@@ -1,5 +1,5 @@
 /**
- * Structure
+ * map, range, delete()
  */
 
 package main
@@ -8,37 +8,115 @@ import(
 	"fmt"
 )
 
-type Books struct {
-	title string
-	author string
-	subject string
-	bookId int
+func main(){
+	var countryCapitalMap map[string]string
+
+	countryCapitalMap = make(map[string]string)
+
+	countryCapitalMap["France"] = "Paris"
+	countryCapitalMap["Italy"] = "Rome"
+	countryCapitalMap["Japan"] = "Tokyo"
+	countryCapitalMap["India"] = "New Delhi"
+
+	fmt.Println("Orginal map")
+
+	for country := range countryCapitalMap {
+		fmt.Println(" Capital of ", country, " is ", countryCapitalMap[country])
+	}
+
+	delete(countryCapitalMap, "Italy")
+	fmt.Println("Entry of Italy is deleted.")
+	
+	fmt.Println("Updated map")
+
+	for country := range countryCapitalMap {
+		fmt.Println(" Capital of ", country, " is ", countryCapitalMap[country])
+	}
 }
 
-func main() {
-	var Book1 Books
-	var Book2 Books
 
-	Book1.title = "Go Programming"
-	Book1.author = "Mike"
-	Book1.subject = "GO Programming Tutorial"
-	Book1.bookId = 100
+/**
+ * Slice
+ */
 
-	Book2.title = "PHP Programming"
-	Book2.author = "Robert"
-	Book2.subject = "PHP Programmig Tutorial"
-	Book2.bookId = 200
+// package main
 
-	fmt.Printf(" Book 1 title is = %s\n", Book1.title)
-	fmt.Printf(" Book 1 author is = %s\n", Book1.author)
-	fmt.Printf(" Book 1 subject is = %s\n", Book1.subject)
-	fmt.Printf(" Book 1 id is = %d\n", Book1.bookId)
+// import(
+// 	"fmt"
+// )
 
-	fmt.Printf(" Book 2 title is = %s\n", Book2.title)
-	fmt.Printf(" Book 2 author is = %s\n", Book2.author)
-	fmt.Printf(" Book 2 subject is = %s\n", Book2.subject)
-	fmt.Printf(" Book 2 id is = %d\n", Book2.bookId)
-}
+// func main(){
+// 	numbers := []int{0,1,2,3,4,5,6,7,8,9}
+// 	printSlice(numbers)
+
+// 	fmt.Println("numbers = ", numbers)
+
+// 	fmt.Println("numbers[1:4] = ", numbers[1:4])
+
+// 	fmt.Println("numbers[:3]", numbers[:3])
+
+// 	fmt.Println("numbers[4:]", numbers[4:])
+
+// 	numbers1 := make([]int, 0, 5)
+// 	printSlice(numbers1)
+
+// 	numbers2 := numbers[2:5]
+// 	printSlice(numbers2)
+
+// 	numbers3 := numbers[2:]
+// 	printSlice(numbers3)
+
+// 	numbers4 := numbers[:5]
+// 	printSlice(numbers4)
+// }
+
+// func printSlice(x []int) {
+// 	fmt.Printf("len = %d, cap = %d, slice = %v", len(x), cap(x), x)
+// }
+
+
+
+/**
+ * Structure
+ */
+
+// package main
+
+// import(
+// 	"fmt"
+// )
+
+// type Books struct {
+// 	title string
+// 	author string
+// 	subject string
+// 	bookId int
+// }
+
+// func main() {
+// 	var Book1 Books
+// 	var Book2 Books
+
+// 	Book1.title = "Go Programming"
+// 	Book1.author = "Mike"
+// 	Book1.subject = "GO Programming Tutorial"
+// 	Book1.bookId = 100
+
+// 	Book2.title = "PHP Programming"
+// 	Book2.author = "Robert"
+// 	Book2.subject = "PHP Programmig Tutorial"
+// 	Book2.bookId = 200
+
+// 	fmt.Printf(" Book 1 title is = %s\n", Book1.title)
+// 	fmt.Printf(" Book 1 author is = %s\n", Book1.author)
+// 	fmt.Printf(" Book 1 subject is = %s\n", Book1.subject)
+// 	fmt.Printf(" Book 1 id is = %d\n", Book1.bookId)
+
+// 	fmt.Printf(" Book 2 title is = %s\n", Book2.title)
+// 	fmt.Printf(" Book 2 author is = %s\n", Book2.author)
+// 	fmt.Printf(" Book 2 subject is = %s\n", Book2.subject)
+// 	fmt.Printf(" Book 2 id is = %d\n", Book2.bookId)
+// }
 
 
 /**
